@@ -14,12 +14,10 @@
 
 #define FALSE 0
 #define TRUE !FALSE
-// Set this macro to the value of TRUE to test Task 1
-#define TEST_TASK_1 FALSE
-// Set this macro to the value of TRUE to test Task 2
-#define TEST_TASK_2 FALSE
-// Set this macro to the value of TRUE to test Task 3
-#define TEST_TASK_3 FALSE
+#define SKIP_TESTING_TASK_1 TRUE
+#define SKIP_TESTING_TASK_2 TRUE
+#define SKIP_TESTING_TASK_3 TRUE
+
 
 #include <algorithm>
 #include <cassert>
@@ -44,13 +42,18 @@
 #include <utility>
 #include <vector>
 
-/**
- * @brief Calculates the nth factorial number.
- * 
- * @param number the value whose factorial we seek
- * @return the factorial of the given number.
- */
-int factorial(int number);
+// Include template class implementation source files
+#include "bag.h"
+#include "VectorBag.cpp"
+
+// Declare template usage to inform compiler what code to actually implement for the template
+template class VectorBag<std::string>;
+
+// TODO: Task 1 - Declare a client function template named remove_and_count() as needed by exercise 5.
+
+// TODO: Task 2 - Implement client function
+
+// DO NOT MODIFY OR ADD ANYTHING BELOW THIS COMMENT!
 
 /**
  * @brief A demonstration for how an input file is read.

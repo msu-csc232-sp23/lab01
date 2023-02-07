@@ -11,10 +11,7 @@
 
 #include "csc232.h"
 
-int factorial(int number)
-{
-    return number > 1 ? factorial(number - 1) * number : 1;
-}
+// DO NOT MODIFY OR ADD ANYTHING BELOW THIS COMMENT
 
 bool read_data(const std::string& input_file)
 {

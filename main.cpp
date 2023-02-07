@@ -11,24 +11,56 @@
 
 #include "csc232.h"
 
-int main( int argc, char* argv[ ] )
+// TODO: Declare a template function named remove_all as prescribed in Task 1
+template <typename T>
+int remove_all(T item);
+
+int main( )
 {
-  // An input file to process
-  std::string input_file;
+    std::string clubs[ ] = {
+            "Joker",
+            "Ace",
+            "Two",
+            "Three",
+            "Four",
+            "Five",
+            "Six",
+            "Seven",
+            "Eight",
+            "Nine",
+            "Ten",
+            "Jack",
+            "Queen",
+            "King"
+    };
 
-  // Check to see if the user has supplied a specific input file for consumption
-  if (argc > 1)
-  {
-    // It is expected as the first argument
-    input_file = argv[1];
-  }
-  else
-  {
-    // Default input file
-    input_file = "main_data.txt";
-  }
+    // Create a VectorBag to hold our cards
+    Bag<std::string> * grabBag = new VectorBag<std::string>();
 
-  bool success = read_data( input_file );
-  return success ? EXIT_SUCCESS : EXIT_FAILURE;
+    // Place six cards in the bag
+    grabBag->add(clubs[1]);
+    grabBag->add(clubs[2]);
+    grabBag->add(clubs[4]);
+    grabBag->add(clubs[8]);
+    grabBag->add(clubs[10]);
+    grabBag->add(clubs[10]);
+    grabBag->add(clubs[12]);
 
+    std::cout << "grabBag count: " << grabBag->getCurrentSize() << std::endl;
+    std::cout << "frequency of \"Ten\": " << grabBag->getFrequencyOf("Ten") << std::endl;
+    grabBag->remove("Ten");
+    std::cout << "grabBag count: " << grabBag->getCurrentSize() << std::endl;
+    std::cout << "frequency of \"Ten\": " << grabBag->getFrequencyOf("Ten") << std::endl;
+    if (grabBag->contains("ten"))
+        std::cout << "The bag contains \"ten\"" << std::endl;
+    else
+        std::cout << "The bag does not contain \"ten\"" << std::endl;
+    return EXIT_SUCCESS;
+}
+
+// TODO: Implement the remove_all template function
+template <typename T>
+int remove_all(T item)
+{
+    return 0;
 }

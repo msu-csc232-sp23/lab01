@@ -11,7 +11,7 @@
 
 #include "csc232.h"
 
-int main( int argc, char* argv[ ] )
+int main( int argc, char* argv[] )
 {
     // An input file to process
     std::string input_file;
