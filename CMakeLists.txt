@@ -21,5 +21,6 @@ add_executable(tests ${SRC_TEST_TARGET_FILES})
 add_custom_command(TARGET main PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_LIST_DIR}/main_data.txt ${CMAKE_CURRENT_BINARY_DIR})
 add_custom_command(TARGET demo PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_LIST_DIR}/demo_data.txt ${CMAKE_CURRENT_BINARY_DIR})
 add_custom_command(TARGET tests PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_LIST_DIR}/test_data.txt ${CMAKE_CURRENT_BINARY_DIR})
-add_custom_command(TARGET tests PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_LIST_DIR}/csc232.* ${CMAKE_CURRENT_BINARY_DIR})
+add_custom_command(TARGET tests PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_LIST_DIR}/csc232.h ${CMAKE_CURRENT_BINARY_DIR})
+add_custom_command(TARGET tests PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_LIST_DIR}/csc232.cpp ${CMAKE_CURRENT_BINARY_DIR})
 

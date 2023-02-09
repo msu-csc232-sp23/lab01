@@ -19,10 +19,10 @@ TEST_SUITE( "Task 3"
 {
     TEST_CASE( "An empty bag doesn't get processed" )
     {
-        Bag<std::string> *bag = new VectorBag<std::string>{};
-        int expected{0};
-        int actual{bag->getCurrentSize()};
-        REQUIRE_EQ(expected, actual);
+        Bag<std::string> *bag = new VectorBag<std::string>{ };
+        int expected{ 0 };
+        int actual{ bag->getCurrentSize( ) };
+        REQUIRE_EQ( expected, actual );
     }
 
     TEST_CASE( "Removing two items" )
@@ -34,8 +34,8 @@ TEST_SUITE( "Task 3"
         std::string item{ "carrots" };
 
         int expected{ 2 };
-        int actual{ remove_and_count(bag, item ) };
-        REQUIRE_EQ(expected, actual);
+        int actual{ remove_and_count( bag, item ) };
+        REQUIRE_EQ( expected, actual );
     }
 }
 #endif

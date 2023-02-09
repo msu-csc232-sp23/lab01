@@ -50,8 +50,15 @@
 template class VectorBag<std::string>;
 
 // TODO: Task 1 - Declare a client function template named remove_and_count() as needed by exercise 5.
+//                The function should return an integer and shall have two parameters:
+//                1. A Pointer to a Bag<T>
+//                2. An item of type T
+//
+//                Keep in mind, this should be declared as a template function, so here, T is
+//                whatever you call your template parameter.
 
 // TODO: Task 2 - Implement client function
+//                Again, don't forget that this is a template function
 
 // DO NOT MODIFY OR ADD ANYTHING BELOW THIS COMMENT!
 
