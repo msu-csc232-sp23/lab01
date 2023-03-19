@@ -1,4 +1,4 @@
-# Client Functions and the Bag ADT
+# LAB01 - Client Functions and the Bag ADT
 
 A client function is a _non-member_ function that _uses_ an instance of some class.
 
